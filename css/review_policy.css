@@ -1,0 +1,243 @@
+/* REVIEW POLICY PAGE CSS */
+/* RESET / GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+/* LOGO + TITLE */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.uni-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.uni-info p {
+    margin-top: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* MENU TOGGLE (mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* NAVIGATION */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    background-color: #4c6ef5;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+    background: #4c6ef5;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    background-color: #fff;
+    color: #4c6ef5;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.btn-cta:hover {
+    background-color: #3558d4;
+    color: #fff;
+}
+
+/* SECTION + CONTAINER */
+.section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* FORMS */
+form {
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group span {
+    color: red;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4c6ef5;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.footer-section {
+    flex: 1 1 200px;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+.footer-section ul li {
+    margin: 5px 0;
+}
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.social-icons a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.social-icons a:hover {
+    color: #bbb;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        padding: 10px 0;
+    }
+    .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .nav-list.show {
+        display: flex;
+    }
+    .hero {
+        padding: 40px 20px;
+    }
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* PAGE-SPECIFIC SECTION (OPTIONAL) */
+/* e.g. .review-policy-custom-class { ... } */

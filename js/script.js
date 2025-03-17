@@ -1,11 +1,20 @@
 // script.js
 
+// Hide loader when the page is fully loaded
+window.addEventListener("load", function () {
+  const loaderContainer = document.querySelector(".loader-container");
+  if (loaderContainer) {
+    loaderContainer.style.display = "none";
+  }
+});
+
+// Toggle menu for mobile
 function toggleMenu() {
   const navLinks = document.getElementById("nav-links");
   navLinks.classList.toggle("show");
 }
 
-// Display the current year in any element with ID="current-year"
+// Display the current year in the footer
 const yearElement = document.getElementById("current-year");
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
@@ -15,25 +24,25 @@ if (yearElement) {
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-      if (!name || !email || !message) {
-          alert("Please fill in all required fields.");
-          return;
-      }
+    if (!name || !email || !message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
 
-      // Simple email pattern check
-      const emailPattern = /\S+@\S+\.\S+/;
-      if (!emailPattern.test(email)) {
-          alert("Please enter a valid email address.");
-          return;
-      }
+    // Simple email pattern check
+    const emailPattern = /\S+@\S+\.\S+/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-      // Simulate form submission (replace with actual submission logic)
-      alert("Thank you for contacting us! We will get back to you soon.");
-      contactForm.reset();
+    // Simulate form submission (replace with actual submission logic)
+    alert("Thank you for contacting us! We will get back to you soon.");
+    contactForm.reset();
   });
 }

@@ -1,10 +1,16 @@
-// script.js
-
-// Hide loader when the page is fully loaded
+// Hide loader with a delay after the page is fully loaded
 window.addEventListener("load", function () {
   const loaderContainer = document.querySelector(".loader-container");
   if (loaderContainer) {
-    loaderContainer.style.display = "none";
+    // Delay hiding the loader by 2 seconds (2000 milliseconds)
+    setTimeout(function () {
+      loaderContainer.classList.add("hide"); // Add the fade-out class
+      
+      // Remove the loader from the DOM after the fade-out animation completes
+      setTimeout(function () {
+        loaderContainer.style.display = "none";
+      }, 500); // Wait for the fade-out animation to finish (0.5s)
+    }, 2000); // Delay before hiding the loader (2 seconds)
   }
 });
 
